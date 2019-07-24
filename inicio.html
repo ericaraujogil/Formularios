@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Hello, world!</title>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container maincontainer">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-tabs nav-justified" id="tabmenu" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="contac-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Contact Form</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="work-tab" data-toggle="tab" href="#work" role="tab" aria-controls="profile" aria-selected="false">Make a request</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active text-center align-items-center form-new" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <h3 class="form-heading tituloform">Contact form</h3>
+                        <div class="row register-form">
+                            <div class="col-md-12">
+                                <form method="post" class="needs-validation" novalidate>
+                                    <div class="form-group">
+                                        <input type="text" name="contactname" class="form-control" placeholder="Escribe tu nombre" value="" required="" />
+                                        <div class="valid-feedback">
+                                            All good
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            You must write a name
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" name="contactlastname" class="form-control" placeholder="Escribe tu apellido..." value="" required="" />
+                                        <div class="valid-feedback">
+                                            All good
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            You must write a lastname
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="h5" for="contactsubject">Escribe el motivo de contacto</label>
+                                        <textarea class="form-control" id="contactsubject" rows="3" required></textarea>
+                                        <div class="valid-feedback">
+                                            All good
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            You must write a message
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" name="Contactosub" class="btnContactSubmit" value="Submit" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show text-center align-items-center form-new" id="work" role="tabpanel" aria-labelledby="work-tab">
+                        <h3 class="register-heading tituloform">Make a request</h3>
+                        <div class="row register-form">
+                            <div class="col-md-12">
+                                <form method="post">
+                                    <div class="form-group">
+                                        <input type="text" name="LGform2_user" class="form-control" placeholder="Your Email *" value="" required="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="LGform2_pwd" class="form-control" placeholder="Your Password *" value="" required="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" name="LGform2" class="btnContactSubmit" value="Login" />
+                                        <a href="ForgetPassword.php" class="btnForgetPwd" value="Login">Forget Password?</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+</body></html>
